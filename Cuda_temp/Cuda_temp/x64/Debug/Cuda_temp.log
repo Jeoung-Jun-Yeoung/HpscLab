@@ -1,1 +1,5 @@
-﻿  Cuda_temp.vcxproj -> C:\Users\user\source\repos\Cuda_temp\x64\Debug\Cuda_temp.exe
+﻿  Compiling CUDA source file main.cu...
+  
+  C:\Users\user\source\repos\Cuda_temp\Cuda_temp>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\HostX86\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.4\include"  -G   --keep-dir x64\Debug  -maxrregcount=0  --machine 64 --compile -cudart static -Xcompiler "/openmp" -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc142.pdb /FS /Zi /RTC1 /MDd " -o x64\Debug\main.cu.obj "C:\Users\user\source\repos\Cuda_temp\Cuda_temp\main.cu" 
+  main.cu
+  Cuda_temp.vcxproj -> C:\Users\user\source\repos\Cuda_temp\x64\Debug\Cuda_temp.exe
