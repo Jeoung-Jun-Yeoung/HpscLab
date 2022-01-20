@@ -22,3 +22,10 @@ https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&D
 +엔디비아 드라이버가 설치되어있지않다면 설치 필요.
 
 test파일 실험중
+
+
+쿠다 버전 11.6 컴파일 정상작동하나, 실행의 문제 있음. 
+
+하위버전으로 변경 필요한듯함..
+
+
