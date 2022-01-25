@@ -2,26 +2,19 @@
 
 
 int main (){
-	int c;
-	int *dev_c;
 
-	cudaMalloc((void**)&dev_c, sizeof(int));
-
-
-	add<<<1,1>>>(2,10,dev_c);
-
-	cudaMemcpy(&c,dev_c,sizeof(int),cudaMemcpyDeviceToHost);
-
-	printf("2 + 7 = %d\n",c);
 
 	int count;
 
-	cudaDeviceProp
+	cudaDeviceProp prop;
 
 	cudaGetDeviceCount(&count);
 
+	for(int i = 0; i < count; i++){
+		cudaGetDeviceProperties(&prop, i);
+		printf("%s \n",prop.name);
+	}
 
-
-	cudaFree(dev_c);
+	// 그래픽 카드 모델명 출력 확인.
 	
 }
