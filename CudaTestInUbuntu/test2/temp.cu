@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <cuda.h>
-#include <iostream>
 
 
 __global__ void kernel(int a, int b, int* c){
@@ -18,9 +17,6 @@ int main(void){
 	
 	cudaMalloc((void**) &dev_c, sizeof(int));
 
-	printf("before c %d\n",*dev_c);
-
-	//printf("befored c %d \n",c);
 
 	kernel<<<1,1>>>(1, 2,dev_c);
 
