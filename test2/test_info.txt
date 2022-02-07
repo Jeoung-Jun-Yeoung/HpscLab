@@ -1,0 +1,6 @@
+Number of characters in file: 1969
+Number of blocks with zeros: 124
+Number of zeros: 28
+Number of blocks without zeros: 122
+Encryption finished in 0.024704 miliseconds
+Decryption finished in 0.010592 miliseconds
