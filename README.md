@@ -88,3 +88,34 @@ OpenGL이라는 라이브러리를 배포했는데, 통해 3D 그래픽스 어�
 그러다 2006년 첫번째 쿠다 아키텍처가 발표되었다. 쿠다 컴파일러와 쿠다 아키텍처를 통해 GPU실행유닛들은 메모리에 대한 임의의 읽기,쓰기가, 캐시접근이 가능해졌다.
 
 - 손글씨 공부내용은 pdf파일을 따로 올렸다.
+
+#### 1.3 기초 CUDA 프로그래밍
+
++cuda 설치는 윗 파트 참고
+
+첫번째 쿠다 코드를 작성해 보자.
+
+<code>
+__global__ void add (int a, int b, int *c){
+    c* = a + b;
+}
+
+int main(){
+int c;
+int\* dev_c;
+
+cudaMalloc((void\*\*)&dev_c,sizeof(int));
+
+add<<<1,1>>>(2,7,dev_c);
+
+cudaMemcpy(&c,dev_c,sizeof(int),cudaMemcpyDeviceToHost);
+
+printf("2 + 7 = %d\n",c);
+
+return 0;
+
+}
+</code>
+
+가장 중요한 포인트는 **global**지시자다. 해당 지시자를 통해 쿠다 컴파일러는 디바이스에서 실행될 코드임을 알 수있다.
+그리고 디바이스내에서 사용할 변수에 대한 메모리 할당을 해 주어야 한다.
