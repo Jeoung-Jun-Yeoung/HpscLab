@@ -81,7 +81,7 @@ __global__ void Cipher(BYTE *plaintext, int plain_length, BYTE expanded[(ROUNDS+
     __syncthreads();
     //encrypt
     //plantext+id*16
-    if (id * 16 <= n){
+    if (id * 16 <= plain_length){
         //Preround
         AES_AddRoundKey(plantext+id*16, gpu_expanded);
         //Round
