@@ -1,6 +1,0 @@
-Number of characters in file: 0
-Number of blocks with zeros: 0
-Number of zeros: 0
-Number of blocks without zeros: 0
-Encryption finished in 0.004096 miliseconds
-Decryption finished in 0.002336 miliseconds
